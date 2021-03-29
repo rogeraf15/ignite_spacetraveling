@@ -1,1 +1,36 @@
-// TODO
+.contentContainer {
+  padding: 5rem 10rem;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 15rem;
+    height: 1.6rem;
+  }
+
+  section {
+    margin-top: 4rem;
+
+    >div + div {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.post {
+  h1 {
+    color: var(--heading);
+    font-size: 1.75rem;
+    margin-bottom: 9px;
+  }
+
+  div {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+
+    div + div {
+      margin-left: 24px;
+    }
+  }
+}
