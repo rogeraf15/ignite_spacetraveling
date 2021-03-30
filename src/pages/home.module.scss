@@ -18,11 +18,15 @@
 }
 
 .post {
+  cursor: pointer;
+  transition: filter 0.2s;
+
   h1 {
     color: var(--heading);
     font-size: 1.75rem;
     margin-bottom: 9px;
   }
+
 
   div {
     margin-top: 10px;
@@ -32,5 +36,9 @@
     div + div {
       margin-left: 24px;
     }
+  }
+
+  &:hover {
+    filter: brightness(0.5);
   }
 }

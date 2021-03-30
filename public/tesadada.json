@@ -1,0 +1,311 @@
+[
+  {
+    "heading": "✅ Pré-requisitos",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "No decorrer do post, vamos mostrar alguns exemplos práticos. Para melhor experiência na leitura do post, você precisa entender:",
+        "spans": [
+          {
+            "start": 73,
+            "end": 103,
+            "type": "strong"
+          }
+        ]
+      },
+      {
+        "type": "list-item",
+        "text": "JavaScript (ES06 à ES08), Promises, React, React Hooks, fetch API, Axios e básico de TypeScript.",
+        "spans": [
+          {
+            "start": 12,
+            "end": 23,
+            "type": "hyperlink",
+            "data": {
+              "link_type": "Web",
+              "url": "https://blog.rocketseat.com.br/as-melhores-features-do-es6-es7-e-es8/"
+            }
+          },
+          {
+            "start": 26,
+            "end": 34,
+            "type": "hyperlink",
+            "data": {
+              "link_type": "Web",
+              "url": "https://blog.rocketseat.com.br/javascript-assincrono-promises/"
+            }
+          },
+          {
+            "start": 36,
+            "end": 41,
+            "type": "hyperlink",
+            "data": {
+              "link_type": "Web",
+              "url": "https://app.rocketseat.com.br/starter"
+            }
+          },
+          {
+            "start": 43,
+            "end": 54,
+            "type": "hyperlink",
+            "data": {
+              "link_type": "Web",
+              "url": "https://blog.rocketseat.com.br/react-hooks/"
+            }
+          },
+          {
+            "start": 56,
+            "end": 65,
+            "type": "hyperlink",
+            "data": {
+              "link_type": "Web",
+              "url": "https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch"
+            }
+          },
+          {
+            "start": 67,
+            "end": 72,
+            "type": "hyperlink",
+            "data": {
+              "link_type": "Web",
+              "url": "https://www.youtube.com/watch?v=vYlz3SmNXQQ&ab_channel=Rocketseat"
+            }
+          },
+          {
+            "start": 85,
+            "end": 95,
+            "type": "hyperlink",
+            "data": {
+              "link_type": "Web",
+              "url": "https://www.youtube.com/watch?v=0mYq5LrQN1s&ab_channel=Rocketseat"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "heading": "🔰 Introdução",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Vercel criou o React Hook SWR para entregar uma melhor experiência ao usuário (UX),  o segredo está em como a ferramenta lida com os dados que foram  buscados independente da implementação do back end (Java, Node.js  PHP) e  da API que a realiza a busca no Front End, por exemplo fetch API do  JavaScript e Axios amplamente utilizados para essa finalidade.",
+        "spans": [
+          {
+            "start": 0,
+            "end": 6,
+            "type": "hyperlink",
+            "data": {
+              "link_type": "Web",
+              "url": "https://vercel.com/"
+            }
+          },
+          {
+            "start": 15,
+            "end": 29,
+            "type": "hyperlink",
+            "data": {
+              "link_type": "Web",
+              "url": "https://github.com/vercel/swr"
+            }
+          },
+          {
+            "start": 26,
+            "end": 29,
+            "type": "strong"
+          },
+          {
+            "start": 34,
+            "end": 82,
+            "type": "strong"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A ferramenta em questão não substitui o fetch API ou Axios, ela é um camada que executa em cima dessas tecnologias — como um Wrapper (algo que envolve). Abaixo veremos com mais detalhes.",
+        "spans": [
+          {
+            "start": 23,
+            "end": 37,
+            "type": "strong"
+          },
+          {
+            "start": 53,
+            "end": 58,
+            "type": "hyperlink",
+            "data": {
+              "link_type": "Web",
+              "url": "https://github.com/axios/axios"
+            }
+          },
+          {
+            "start": 125,
+            "end": 132,
+            "type": "em"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "SWR é uma sigla para Stale-While-Revalidate  (tradução literal: traga os dados antigos enquanto avalia se tem novos  dados). Essa é uma estratégia que pega os dados do cache e depois, por  baixo dos panos, é feito uma requisição ao back end para trazer os novos  dados se possuir, recarregando a listagem com os novos dados, de  maneira que fique transparente para o usuário.",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "type": "strong"
+          },
+          {
+            "start": 21,
+            "end": 22,
+            "type": "strong"
+          },
+          {
+            "start": 21,
+            "end": 43,
+            "type": "em"
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "type": "strong"
+          },
+          {
+            "start": 33,
+            "end": 34,
+            "type": "strong"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Com o SWR, os  componentes vão receber o fluxo de atualizações de dados constante e  automaticamente. A interface do usuário será sempre rápida e reativa.",
+        "spans": [
+          {
+            "start": 137,
+            "end": 143,
+            "type": "strong"
+          },
+          {
+            "start": 146,
+            "end": 153,
+            "type": "strong"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O que o SWR entrega:",
+        "spans": [
+          {
+            "start": 0,
+            "end": 20,
+            "type": "strong"
+          }
+        ]
+      },
+      {
+        "type": "list-item",
+        "text": "Um rápido, leve e reusável data fetching;",
+        "spans": [
+          {
+            "start": 27,
+            "end": 40,
+            "type": "em"
+          }
+        ]
+      },
+      {
+        "type": "list-item",
+        "text": "Cache integrado e evita redundância de requisição;",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "Experiência Real-time;",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "Suporte ao TypeScript;",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "Possibilidade de ser utilizado no React Native;",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "Navegação rápida entre páginas;",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "Revalidação dos dados quando a tela recebe foco (revalidate-on-focus);",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "Revalidação de dados quando reconecta à Internet;",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "Mutação de dados locais com (Optimistic UI);",
+        "spans": [
+          {
+            "start": 29,
+            "end": 42,
+            "type": "em"
+          }
+        ]
+      },
+      {
+        "type": "list-item",
+        "text": "React Suspense;",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "API agnóstica, pode ser utilizado com REST ou GraphQL;",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "Back end agnóstico, não importa em qual linguagem foi implementado.",
+        "spans": []
+      }
+    ]
+  },
+  {
+    "heading": "🤝 Conhecendo a API do SWR:",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "const { data, error, isValidating, mutate } = useSWR(key, fetcher, options) ",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "data = os dados retornados da API;",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "error =  caso algum erro tenha ocorrido;",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "isValidating = Boolean que retorna true se estiver buscando os dados da API e false quando já retornou os dados, ou seja, já foi feita a validação;",
+        "spans": []
+      },
+      {
+        "type": "list-item",
+        "text": "mutate = função que irá alterar algum valor no cache.",
+        "spans": []
+      }
+    ]
+  }
+]
