@@ -54,25 +54,27 @@ export default function Post({ post } : PostProps) {
       <Header />
       <img src={post.data.banner.url} alt="banner"/>
       <div className={commonStyles.container}>
-        <main className={styles.main}>
-          <header>
+        <main className={styles.mainContainer}>
+          <header >
             <h1>{post.data.title}</h1>
-            <div>
+            <div className={styles.headerBoard}>
               <div>
-                <FiCalendar />
-                <time>
+                <FiCalendar size={20}/>
+                <span>
                   { format(new Date(post.first_publication_date), "dd MMM yyyy", {
                       locale: ptBR,
                     })
                   }
-                </time>
+                </span>
               </div>
               <div>
-                <FiUser />
-               {post.data.author}
+                <FiUser size={20}/>
+                <span>
+                  {post.data.author}
+                </span>
               </div>
               <div>
-                <FiClock />
+                <FiClock size={20}/>
                 <span>
                   {readTime} min
                 </span>
@@ -82,9 +84,11 @@ export default function Post({ post } : PostProps) {
 
           <div>
             {post.data.content.map(itemContent => (
-                <article key={itemContent.heading}>
+                <article
+                  className={styles.postContent}
+                  key={itemContent.heading}
+                >
                   <h2>{itemContent.heading}</h2>
-
                   <>
                     {itemContent.body.map((itemBody, index) => {
                       return itemBody.type === 'list-item' ? (
@@ -116,6 +120,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   );
 
   const slugs = response.results.map(slug => slug.uid);
+
 
   return {
     paths: slugs.map(slug => ({

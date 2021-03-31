@@ -3,5 +3,39 @@
     width: 100%;
     height: 25rem;
   }
+}
 
+.mainContainer {
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4.5rem 0;
+}
+
+.headerBoard {
+  display: flex;
+  margin: 1.5rem 0 0;
+  flex-direction: row;
+
+  div {
+    display: flex;
+    margin-right: 1.5rem;
+    align-items: center;
+
+    span {
+      margin-left: 0.5rem;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.postContent {
+  h2 {
+    font-size: 1.7rem;
+    margin: 3rem 0;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
 }

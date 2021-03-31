@@ -10,7 +10,7 @@ import styles from './home.module.scss';
 import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface Post {
   uid?: string;
@@ -47,6 +47,10 @@ export default function Home({ postsPagination }: HomeProps) {
       };
     })
   );
+
+  useEffect(() => (
+    console.log(nextPage)
+  ),[nextPage])
 
 
   function handleNextPage(): void {
@@ -85,17 +89,21 @@ export default function Home({ postsPagination }: HomeProps) {
         {results.map(post => {
           return(
             <Link href={`/post/${post.uid}`} key={post.uid}>
-              <div className={styles.post} >
+              <div className={styles.postContainer} >
                 <h1>{post.data.title}</h1>
                 <p>{post.data.subtitle}</p>
                 <div>
                   <div>
-                    <FiCalendar />
-                    {post.first_publication_date}
+                    <FiCalendar size={19}/>
+                    <span>
+                      {post.first_publication_date}
+                    </span>
                   </div>
                   <div>
-                    <FiUser />
-                    {post.data.author}
+                    <FiUser size={19}/>
+                    <span>
+                      {post.data.author}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -104,7 +112,7 @@ export default function Home({ postsPagination }: HomeProps) {
         })}
         </section>
 
-        {postsPagination.next_page !== null && (
+        {nextPage !== null && (
         <footer className={styles.homeFooter}>
           <button type="button" onClick={handleNextPage}>
             Carregar mais posts
@@ -121,7 +129,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const postsResponse = await prismic.query([
     Prismic.predicates.at('document.type', 'posts'),
   ], {
-    fetch: ['posts.title', 'posts.content', 'posts.author', 'posts.subtitle']
+    fetch: ['posts.title', 'posts.content', 'posts.author', 'posts.subtitle'],
+    pageSize: 4,
   });
 
   const posts = postsResponse.results.map(post => {
