@@ -62,6 +62,7 @@ $ yarn dev
 - [NextJS](https://nextjs.org/)
 - [PrimiscCMS](https://prismic.io/)
 - [Typescript](https://www.typescriptlang.org/)
+- [Sass](https://sass-lang.com/)
 
 
 ## :memo: License
