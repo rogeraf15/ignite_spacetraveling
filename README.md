@@ -43,7 +43,7 @@ Before starting :checkered_flag:, you need to have installed:
 $ git clone https://github.com/rogeraf15/spacetraveling
 
 # Access
-$ cd https://github.com/rogeraf15/spacetraveling
+$ cd spacetraveling
 
 # Install dependencies
 $ yarn
